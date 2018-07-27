@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/todos', 'TodosController@store')
+    ->name('todos.store')
+    ->middleware('auth');
